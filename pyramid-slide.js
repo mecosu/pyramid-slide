@@ -4,25 +4,31 @@ var heightElem = document.getElementById("height");
 var brickSymbol = document.getElementById("brick-symbol");
 var formElem = document.getElementById("draw-form");
 
-// set a handler function for the form's submission event
 formElem.oninput = function(event) {
 
+    // when height changed, redraws pyramid
+    // with the specified height and brick symbol
     height = heightElem.value;
     brick = brickSymbol.value;
     console.log(height)
-    // draw pyramid with the specified height
+    displayHeight(height);
     drawPyramid(height);
 }
 
 formElem.onchange = function(event) {
-    
+
+    // when brick symbol changed, redraws pyramid
+    // with the specified height and brick symbol
     height = heightElem.value;
     brick = brickSymbol.value;
     console.log(brick)
-    // draw pyramid with the specified height
     drawPyramid(height);
 }
 
+function displayHeight(height) {
+    height = heightElem.value;
+    document.querySelector(".display-height").innerHTML = height;
+}
 /**
  * drawPyramid
  *
@@ -49,31 +55,8 @@ function drawPyramid(height) {
         for (var i = 0; i < numBricks; i++) {
                      rowStr += brick;
               }
-        //if (brick === "#") {
-        //    for (var i = 0; i < numBricks; i++) {
-       //         rowStr += "#";
-         //   }
-        //}
 
-        //if (brickSymbol === "@") {
-        //    for (var i = 0; i < numBricks; i++) {
-        //        rowStr += "@";
-       //     }
-       // }
-
-        //if (brickSymbol === "X") {
-        //    for (var i = 0; i < numBricks; i++) {
-        //        rowStr += "X";
-        //    }
-        //}
-
-        //if (brickSymbol === "$") {
-        //    for (var i = 0; i < numBricks; i++) {
-       //         rowStr += "$";
-        //    }
-        //}
-
-        // make a <p> element for this row, and insert it into the #pyramid container
+        // makes a <p> element for this row, and insert it into the #pyramid container
         rowElem = document.createElement("p");
         rowElem.innerHTML = rowStr;
         document.getElementById("pyramid").appendChild(rowElem);
