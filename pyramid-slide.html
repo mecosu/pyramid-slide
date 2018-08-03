@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+  
+    </style>
+</head>
+<body>
+    <h1>Pyramid Slide</h1>
+
+    <form id="draw-form">
+        <label>Brick symbol:
+                <select id="brick-symbol">
+                        <option value="#">#</option>
+                        <option value="@">@</option>
+                        <option value="X">X</option>
+                        <option value="$">$</option>
+                </select>
+        </label>
+        <label>
+            How high?
+            <input type="range" id="height" min="0" max="20"/>
+        </label>
+        <br><br>
+    </form>
+
+    <br><br>
+
+    <div id="pyramid"></div>
+
+    <script src="pyramid-slide.js"></script>
+</body>
+</html>
