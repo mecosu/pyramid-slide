@@ -1,0 +1,25 @@
+header {
+    background-color: purple;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html, body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#pyramid {
+    font-weight: bold;
+    font-size: 1.3em;
+}
